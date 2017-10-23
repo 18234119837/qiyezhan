@@ -34,10 +34,51 @@ header{
 }
 /*导航结束*/
 /*banner开始*/
+.banner-box{
+    width: 100%;
+    height: 492px;
+    position: relative;
+}
 .banner{
     width: 100%;
     height: 492px;
-    background: yellow;
+}
+.banner li{
+    width: 100%;
+    height: 492px;
+    opacity: 0;
+    transition: all 1s;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.banner li.qy-active{
+    z-index: 9;
+    opacity: 1;
+}
+.qy-dianbox{
+    width: 80px;
+    height: 14px;
+    position: absolute;
+    left:50%;
+    margin-left:-40px;
+    bottom:20px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+.qy-dianbox li{
+    width: 14px;
+    height: 14px;
+    background:rgba(255,255,255,0);
+    border-radius: 50%;
+    border: solid 2px #fff;
+}
+.qy-dianbox li:hover{
+    background: white;
+}
+.qy-dianbox .dian-active{
+    background: white;
 }
 /*banner结束*/
 /*主体内容开始*/
@@ -105,6 +146,9 @@ header{
     background: #404040;
 }
 .three-nav li.first-nav{
+    background: #C7000A;
+}
+.three-nav li:hover{
     background: #C7000A;
 }
 /*标题结束*/

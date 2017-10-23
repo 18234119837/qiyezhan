@@ -34,10 +34,51 @@ header{
 }
 /*导航结束*/
 /*banner开始*/
+.banner-box{
+    width: 100%;
+    height: 492px;
+    position: relative;
+}
 .banner{
     width: 100%;
     height: 492px;
-    background: yellow;
+}
+.banner li{
+    width: 100%;
+    height: 492px;
+    opacity: 0;
+    transition: all 1s;
+    position:absolute;
+    left:0;
+    top:0;
+}
+.banner li.qy-active{
+    z-index: 9;
+    opacity: 1;
+}
+.qy-dianbox{
+    width: 80px;
+    height: 14px;
+    position: absolute;
+    left:50%;
+    margin-left:-40px;
+    bottom:20px;
+    z-index: 999;
+    display: flex;
+    justify-content: space-between;
+}
+.qy-dianbox li{
+    width: 14px;
+    height: 14px;
+    background:rgba(255,255,255,0);
+    border-radius: 50%;
+    border: solid 2px #fff;
+}
+.qy-dianbox li:hover{
+    background: white;
+}
+.qy-dianbox .dian-active{
+    background: white;
 }
 /*banner结束*/
 /*标题开始*/
@@ -114,7 +155,11 @@ header{
     margin: 0 auto;
     color: white;
 }
-.img-box li a{
+.img-box li.img-txt-box .read-more a{
+    text-align: center;
+    color: white;
+}
+.img-box .suofang a{
     display: block;
     width: 300px;
     height: 299px;
@@ -129,11 +174,6 @@ header{
     transform: scale(1.2);
    transition: all 1s linear ;
 }
-
-
-
-
-
 /*图片内容结束*/
 .pinpai{
     width: 100%;
@@ -169,14 +209,6 @@ header{
     width: 600px;
     height:349px;
 }
-/*.pinpai-inner-left:hover img{*/
-/*transform: scale(1.2);*/
-/*transition: all 1s linear ;*/
-/*}*/
-
-
-
-
 .pinpai-inner-right{
     padding:47px 65px;
     background: #fefdf8;
@@ -210,6 +242,11 @@ header{
     right: 0;
     bottom: 0;
 }
+#more-read a{
+    color:white;
+}
+
+
 /*品牌结束*/
 /*咨询开始*/
 .message-title{
